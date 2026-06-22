@@ -1,0 +1,2 @@
+print("hjha")
+print ("lingwa")
