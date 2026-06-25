@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+</head>
+<body>
+
+    <h1>Меню кав'ярні</h1>
+
+    <p>севодня р: {{ current_day }}</p>
+
+    <ul>
+        {% for item, price in menu.items() %}
+
+            {% if current_day == "Friday" %}
+                <li>
+                    {{ item }} -
+                    {{ (price * 0.9)|round(2) }} грн
+                    (знижка 10%)
+                </li>
+            {% else %}
+                <li>
+                    {{ item }} - {{ price }} грн
+                </li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+
+    <a href="/">На головну</a>
+
+</body>
+</html>

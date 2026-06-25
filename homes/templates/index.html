@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Кав'ярня</title>
+</head>
+<body>
+
+    <h1>{{ cafe_name }}</h1>
+
+    <p>Графік роботи: 11:00 - 22:00</p>
+
+    {% if current_time.hour >= 11 and current_time.hour < 22 %}
+        <h2>Статус: Відкрито ✅</h2>
+    {% else %}
+        <h2>Статус: Зачинено ❌</h2>
+    {% endif %}
+
+    <a href="/menu">Перейти до меню</a>
+
+</body>
+</html>
